@@ -1,0 +1,20 @@
+server:
+  port: 0
+  error:  #spring-boot-starter-validation
+    include-message: always
+    include-binding-errors: always
+
+
+spring:
+  application.name: payment-server
+  datasource:
+    url: jdbc:h2:file:./PaymentsService/src/main/resources/db/payments;AUTO_SERVER=true
+    username: cba
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: update
+  h2.console:
+    enabled: true
+    settings.web-allow-others: true
